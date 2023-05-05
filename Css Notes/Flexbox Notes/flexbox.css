@@ -1,0 +1,99 @@
+/* Flexbox froggy adlı sayfa ile öğrendiklerini pekiştirebilirsin 
+
+justify-content Flex öğeleri main axis boyunca hizalar. row ise sağ sol şekilde column ise yukarı aşağı şeklinde
+align-items Flex öğelerini cross-axis boyunca hizalar. row ise aşağı yukarı column ise sağ sol şeklinde
+flex-direction Flex öğelerinin dizlişini belirler.
+order Flex öğelerinin dizilme sırasını belirler.
+align-self align-items'ın değerini ezerek, sadece belirli öğeyi cross-axis boyunca hizalar
+flex-wrap Flex öğelerinin satıra sığacak mı yoksa taşacak mı durumunu ayarlar.
+flex-flow flex-direction ve flex-wrap için kısa yazım özelliği.
+align-content Itemsin aksine satır satır hizalama yapar
+
+Main axis hizanın yönü örneğin row da sağa doğru columnda aşağı
+Cross-axis ise hizaya dikey örneğin row da aşağı doğru columnda sağa doğru
+
+Flex ve grid farkı nedir?
+Flexbox tek boyutlu kodlamamızı sağlıyorken, grid layout modelinde ise önceden tanımlanmış esnek bir container'a children elementlerin her iki boyutta da istenildiği gibi hizalanmasını sağlar.
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{scroll-behavior: smooth;}
+
+body{
+
+    font-size: 1.5rem;;
+    font-family: 'Noto Sans JP', sans-serif;
+    min-height: 100vh;
+    padding:20px;
+    
+}
+
+.container{
+
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline:  auto;
+    border: 1px solid black;
+    
+    
+    display: flex; /* Görünüşü ayarlamamızı sağlar */
+    gap: 1rem; /* Sütunlar oluştur ve kutular arası boşluğun boyutunu belirler */
+    justify-content: center; /* flex-start kutumuzu en sola yani başlagıça flex-end ise kutuyu en sağa yani sona yerleştirir */
+    justify-content: space-between; /* kutulardan birini başa diğerini sona yerleştirir ve diğerlerini onlara göre hizalar */
+    justify-content: space-around; /* Kutuları kendi aralarında eşit mesafe ile dağıtır */
+    justify-content: space-evenly; /* Eşit beyaz boşluklarla siyah kutuları dağıtır */
+    align-items: center; /* text-align: mantığı ile aynı mantık, mesela bu kodda kutuları hareket ettiriyoruz */
+    
+    flex-direction:row; /*  flex-direction: row flex kutularını düzgün yatay sıralar
+                            flex-direction: row-reversed flex kutularını yatay ancak tersine şekilde sıralar  
+                            flex-direction: column flex kutularını dikey şekilde sıralar
+                            flex-direction: column-reversed flex kutularını dikey şekilde ancak tersine sıralar  */
+    
+    flex-wrap:wrap;  /* nowrap değeri kutucukların ebeveyn kutu küçüldüğünde dışarı taşmasını sağlar
+                        wrap değeri verilirse kutucuklar ebeveyn kutu küçülse bile dışarı taşmazlar
+                        wrap-reversed değeri verilirse kutucuklar ebeveyn kutu küçülse bile dışarı taşmazlar ancak tersen sıralanırlar  */
+    
+    flex-flow:row nowrap; /* wrap ve direction değerlerini tek satırda yazmamızı sağlar */
+
+}
+
+.box{
+
+    min-width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-size:2rem;    
+    padding:0.5rem;
+
+    flex: 1 1 40%; /* ilk değer grow ikinci değer shrink son değer ise basis değeridir */
+    
+    flex-basis: 600px; /* flex kutularının büyüklüğü ayrlamamızı sağlar column halinde ise aşağı yukarı yönde row halinde ise sağa sola yönde büyür*/
+
+}
+
+.box:nth-child(1){
+
+    flex-grow: 2; /* flex kutularının büyüklük çarpanıdır ekranın büyüme halinde kutunun büyüme katsayısıdır eksi değer alamaz  */
+
+}
+
+.box:nth-child(2){
+
+    flex-grow:2;
+    flex-shrink: 0; /* flex kutularının küçülme çarpanıdır büzülme durumunda kutunun küçülme katsayını ayarlarız*/
+    order: 1; /* kutumuzun sıralamanın neresinde olduğunu ayarlar -1 ilk baş 0 kendi yeri 1 en son */
+
+
+}

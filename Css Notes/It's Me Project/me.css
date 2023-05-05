@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img{
+
+    display: inline;
+    max-width: 100%;
+    height: auto;   
+    
+
+}
+
+
+
+body{
+    
+    font-size:1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: rgb(173, 156, 134);
+    display: flex;
+    flex-direction: column;
+
+}
+
+header,footer{
+    position: sticky;
+    background-color:antiquewhite;
+    color:rgb(26, 25, 25);
+    text-align:center;
+    z-index: 1;
+
+}
+
+h1{
+    border-bottom: 2px solid black;
+    text-align: left;
+}
+
+header{top: 0;}
+
+footer{ 
+    bottom: 0;}
+
+nav {
+    background-color:antiquewhite;
+    padding: 0.8rem;
+    border-bottom: 2px solid #000;
+    font-weight: bolder;
+    
+}
+  
+nav a:any-link {
+    color: #000;
+    text-decoration: none;
+    padding-left: 3rem;
+}
+  
+nav :is(a:hover, a:focus) {
+    color: hsla(0, 0%, 20%, 0.6);
+}
+  
+nav a:active {
+    color: red;
+}
+  
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    
+}
+
+.card{
+
+    border: 1px solid black;
+    border-radius: 15px;
+    background-image: radial-gradient(rgb(255, 233, 205),rgb(252, 216, 171));
+    box-shadow:5px 5px 15px #000;
+
+}
+
+img{
+    
+    border: 1px solid black;
+    height: 30rem;
+    border-radius: 50%;
+    margin: 2rem 2rem auto 5rem;
+    
+}
+
+p{
+    position: relative;   
+    font-size:1.4rem; 
+}
+
+/* SMALL  */
+@media screen and (max-width:856px){
+
+
+    div{
+
+        display: grid;
+        justify-content: center;
+        
+    }
+
+    p{
+
+        position: relative;
+
+    }
+}
+
+/* MEDİUM  */
+@media screen and (min-width:857px) and (max-width:1280px){
+
+    div{
+
+        display: grid;
+        justify-content: center;
+    }
+
+    .images:first-child , .images:nth-child(2){
+
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+
+    }
+
+    p{
+
+        position: relative;
+
+    }
+}
+
+/* LARGE */
+@media screen and (min-width:1281px) {
+
+    div{
+
+        display: grid;
+        justify-content: center;
+    }
+
+    .images:first-child , .images:nth-child(2){
+
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+
+    }
+
+    p{
+
+        position: relative;
+
+    }
+}

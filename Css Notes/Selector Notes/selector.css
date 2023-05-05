@@ -1,0 +1,124 @@
+*{
+
+font-family: monospace;
+
+}
+
+body{
+
+font-size: 22px;
+
+}
+
+.gray{
+
+    color:gray;
+}
+
+p{
+
+    color: red; /* !important elementi kodun önce okunmasını sağlar ama  her zaman kullanma */
+
+}
+
+p{
+    
+    color: blueviolet; 
+
+}
+
+p span { /* p span yerine daha az karmaşık dursun diye o kısma bir class verebiliriz mesela highlight*/
+
+text-transform: uppercase;
+background-color:yellow;
+
+}
+
+
+#second{
+
+    font-style: italic    ;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.class 	                .intro 	                Classı "intro" olan elemntleri seçer
+.class1.class2 	        .name1.name2 	        Classı "name1" ve "name2" olan tüm elementleri seçer
+.class1.class2 	        .name1 .name2 	        "name1" classı içerisindeki tüm "name2" elementlerini seçer (name1 classlı elementler seçilmez) 
+#id 	                #firstname 	            İd'si "firstname" olan elementleri seçer
+* 	                    * 	                    Bütün elementleri seçer
+element                 p 	                    Bütün p elementleri seçilir
+element.class 	        p.intro 	            Classı "intro" olan bütün p elementlerini seçer
+element,element 	    div, p 	                Bütün div elementlerini ve p elementlerini seçer
+element element 	    div p 	                Div elementinin içindeki tüm p elementlerini seçer
+element>element 	    div > p 	            Div elementi adı altında toplanan bütün p elementlerini seçer
+element+element 	    div + p                 Div elementinden hemen sonra gelen ilk p elementini seçer (Div elementinin içerisinde olmamalı)
+element1~element2 	    p ~ ul 	                P elementinden sonra gelen tüm ul elementlerini seçer
+[attribute] 	        [target] 	            Target özelliğine sahip bütün elementleri seçer
+[attribute=value] 	    [target="_blank"] 	    Target="_blank" özelliğine sahip bütün elementleri seçer
+[attribute~=value] 	    [title~="flower"] 	    Title özelliği flower kelimesi olan tüm elementleri seçer 
+[attribute|=value] 	    [lang|="en"] 	        Lang özelliği "en" yada "en-" ile başlayan tüm elementleri seçer.
+[attribute^=value] 	    a[href^="https"] 	    href özelliği "https" ile başlayan tüm elementleri seçer 
+[attribute$=value] 	    a[href$=".pdf"] 	    href özelliği ".pdf" ile biten tüm elementleri seçer
+[attribute*=value] 	    a[href*="w3schools"] 	href özelliği "w3schools" alt dizesini içeren tüm elementleri seçer.
+:active 	            a:active 	            Aktif linklerii seçer (Aktif link o sırada tıklanan link demek)
+::after 	            p::after 	            Her p elementinden sonra yanına birşey ekler
+::before 	            p::before 	            Her p elementinden önce önüne birşey ekler
+:checked 	            input:checked 	        Bütün checked özelliğine sahip yani seçilmiş input elementlerini seçer
+:default 	            input:default 	        Bütün default input elementlerini seçer 
+:disabled 	            input:disabled 	        Bütün disabled input elementlerini seçer
+:empty 	                p:empty 	            Bütün içi boş p elementlerini seçer
+:enabled 	            input:enabled 	        Bütün enabled input elementlerini seçer
+:first-child 	        p:first-child 	        Bir bölümlerdeki (div, section, article gibi bölümler) sadece ilk p elementlerinin hepsini seçer
+::first-letter 	        p::first-letter 	    p elementinin içerisindeki ilk harfi seçer
+::first-line 	        p::first-line 	        p elementi içerisindeki ilk satırı seçer
+:first-of-type 	        p:first-of-type 	    Bir bölümlerdeki (div, section, article gibi bölümler) sadece ilk p elementlerinin hepsini seçer
+:focus 	                input:focus 	        Focus özelliğine sahip input elementlerini seçer
+:fullscreen 	        :fullscreen 	        Full screen modu özelliğine sahip elementleri seçer
+:hover 	                a:hover 	            Mouse linkin üzerinde geldiğinde aktive olmasını sağlar
+:in-range 	            input:in-range 	        Belirli bi aralık özelliğine sahip input elementleri seçer
+:indeterminate 	        input:indeterminate 	Belirsiz durumda olan giriş öğelerini seçer (Javascript)
+:invalid 	            input:invalid 	        Geçersiz (hatalı, eksik) değere sahip elementleri seçer 
+:lang(language) 	    p:lang(it) 	            Lang özelliği "it" olan p elementlerini seçer
+:last-child 	        p:last-child 	        Bir bölümlerdeki (div, section, article gibi bölümler) sadece son p elementlerinin hepsini seçer
+:last-of-type 	        p:last-of-type 	        Bir bölümlerdeki (div, section, article gibi bölümler) sadece son p elementlerinin hepsini seçer
+:link 	                a:link 	                Daha önce tıklanmamış linkleri seçer
+::marker 	            ::marker 	            Liste itemlerinin markerini seçer (numaralar yada şekiller gibi) 
+:not(selector) 	        :not(p) 	            p olmayan bütün elementleri seçer
+:nth-child(n) 	        p:nth-child(2) 	        Bir bölümlerdeki (div, section, article gibi bölümler) sadece ikinci p elementlerinin hepsini seçer
+:nth-last-child(n) 	    p:nth-last-child(2) 	Bir bölümlerdeki (div, section, article gibi bölümler) sadece sondan ikinci p elementlerinin hepsini seçer
+:nth-last-of-type(n) 	p:nth-last-of-type(2) 	Bir bölümlerdeki (div, section, article gibi bölümler) sadece sondan ikinci p elementlerinin hepsini seçer
+:nth-of-type(n) 	    p:nth-of-type(2) 	    Bir bölümlerdeki (div, section, article gibi bölümler) sadece ikinci p elementlerinin hepsini seçer
+:only-of-type 	        p:only-of-type 	        p elementinin içerisindeki p elementlerini seçer
+:only-child 	        p:only-child 	        Bir bölümlerdeki (div, section, article gibi bölümler) sadece tek p elementi var ise o p elementlerini seçer
+:optional 	            input:optional 	        "required" özelliğine sahip olmayan input elementlerini seçer
+:out-of-range 	        input:out-of-range 	    Belirli bi aralık dışında özelliğine sahip input elementleri seçer
+::placeholder 	        input::placeholder 	    Belirtilmiş "placeholder" özelliğine sahip input elementlerini seçer
+:read-only 	            input:read-only 	    Belirtilmiş "read-only" özelliğine sahip input elementleri seçer
+:read-write 	        input:read-write 	    Belirtilmemiş "read-only" özelliğine sahip input elementleri seçer
+:required 	            input:required 	        Belirtilmiş "required" özelliğine sahip input elementleri seçer
+:root 	                :root 	                Dökümanın kök elementini seçer
+::selection 	        ::selection 	        Kullanıcının üstünü çizdiği seçiciyi seçer
+:target 	            #news:target 	        Sayfa içerisinde #news adlı bölüme yönlendirme yaparken kulanılır
+:valid 	                input:valid 	        Geçerliliğe sahip inputlar için yazılır.
+:visited 	            a:visited 	            Daha önce tıklanmış linkleri seçer
+
+
+
+
+
+Tüm hepsini internette aratarak W3schoolsdan bulabilirsin
+
+*/

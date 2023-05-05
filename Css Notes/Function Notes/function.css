@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --FF: "Noto Sans JP", sans-serif; 
+  --FS: clamp(1.75rem,3vh,2.25rem); 
+  --FS-XL: 4rem; 
+  --HG-HDR: 7rem;
+  --HG-P: 17rem;
+
+}
+header{
+
+  background-color: antiquewhite;
+  height: var(--HG-HDR);
+  font-size: var(--FS);
+}
+
+main{
+
+  display: flex;
+  flex-wrap: no-wrap;
+  height: var(--HG-P);
+}
+
+main section{
+  flex: 2;
+  background-color:bisque ;
+  font-size: var(--FS-XL);
+  width: calc(70% - 5px);
+}
+
+main aside{
+  flex: 1;
+  background-color:hsla(0, 0%, 20%, 0.8);
+  width: calc(30% - 5px);
+}
+
+a{
+ color: firebrick; 
+}
+
+a:hover , a:focus{
+
+  filter:brightness(150%); /* Filter etiketi ile öğenin üzerinde değişiklikler yapılabilir. En aşağıda fonksiyonlarını bulabilirsiniz. */
+
+} 
+
+
+/* 
+
+attr() 	                      Seçilen öğenin bir özniteliğinin değerini döndürür
+calc() 	                      CSS özellik değerlerini belirlemek için hesaplamalar yapmanızı sağlar
+conic-gradient() 	            conic gradient fonksiyonu yaratır
+counter() 	                  Adlandırılmış sayacın geçerli değerini döndürür
+cubic-bezier() 	              Bir Cubic Bezier eğrisi tanımlar
+hsl() 	                      Ton-Doygunluk-Açıklık modelini (HSL) kullanarak renkleri tanımlar
+hsla() 	                      Ton-Doygunluk-Açıklık-Alfa modelini (HSLA) kullanarak renkleri tanımlar
+linear-gradient() 	          linear gradient fonksiyonu yaratır
+max(x,y) 	                    Özellik değeri olarak virgülle ayrılmış bir değerler listesinden en büyük değeri kullanır
+min(x,y) 	                    Özellik değeri olarak virgülle ayrılmış bir değerler listesinden en küçük değeri kullanır
+radial-gradient() 	          radial gradient fonksiyonu yaratır
+repeating-conic-gradient() 	  conic gradient fonksiyonunu tekrarlar
+repeating-linear-gradient() 	linear gradient fonksiyonunu tekrarlar
+repeating-radial-gradient() 	radial gradient fonksiyonunu tekrarlar
+rgb() 	                      Kırmızı-Yeşil-Mavi modelini (RGB) kullanarak renkleri tanımlar
+rgba() 	                      Kırmızı-Yeşil-Mavi-Alfa modelini (RGBA) kullanarak renkleri tanımlar
+var() 	                      Özel bir özelliğin değerini ekler 
+clamp(min,default,max)        Minimum sınır ile maksimum sınır arasındaki bir değer aralığı içinde bir orta değeri sıkıştırır
+
+*/
+
+/*
+
+filter: none          Hiçbir efekt eklemez. 
+blur(px)              Blur efekti ekler.
+brightness(%)         Parlaklık efekti ekler. 100% varsayılan halidir aşağı inildikçe karanlıklaşır yukarı çıkıldıkça parlaklık artar
+contrast(%)           Zıtlık efekti ekler. brightness mantığı ile çalışır
+drop-shadow()         Gölge efekti ekler. Sırası ile h-shadow (yatay ve gerekli), v-shadow (dikey ve gerekli), blur (opsiyonel,px), spread(gölge büyüklüğü,opsiyonel,px), color(opsiyonel) 
+grayscale(&)          Grilik efekti ekler. 0% varsayılan 100% tamamen gri
+hue-rotate(deg)       Görüntüye bir ton döndürme uygular. Değer, görüntü örneklerinin ayarlanacağı renk çemberi etrafındaki derece sayısını tanımlar
+invert(%)             Görüntüdeki örnekleri ters çevirir.
+opacity(%)            Görüntüye opaklık ekler.
+saturate(%)           Görüntüye doygunluk ekler.
+sepia(%)              Görüntüye eskilik katar.
+url()                 bir SVG filtresini belirten bir XML dosyasının konumunu alır ve belirli bir filtre öğesine bir bağlantı içerebilir.
+
+*/

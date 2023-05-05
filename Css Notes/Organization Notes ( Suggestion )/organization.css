@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans+JP:wght@300&display=swap');
+
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+
+    --HEADER-BGCOLOR:#333;
+    --HEADER-COLOR:whitesmoke;
+    --BTN-BGCOLOR:beige;
+    --BTN-COLOR:whitesmoke;
+
+}
+
+html{
+
+    font-size: 2.5rem;
+    font-family: 'Abel', sans-serif;
+
+}
+
+body{
+
+    min-height: 100vh;
+}
+
+header{
+    background-color:var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding:1rem 1rem 0.5rem;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+}
+
+button{
+
+    font: inherit;
+}
+
+.header_btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.header_btn--secondary{
+    background-color: yellow;
+}
+
+.header_btn--lean:hover{
+    transform:rotate(360deg);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.header_btn--border-lg{
+    border: 5px solid whitesmoke;
+}

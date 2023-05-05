@@ -1,0 +1,24 @@
+/* rgb(0,0,0) sırası ile kırmızı yeşil mavi renkleridir rgba(0,0,0,0) sondaki sayı saydamlık belirtir ve 0 ile 1 arasındadır 
+Ayrıca renkler için kod kullanılabilir #000000 siyah #FFFFFF beyaz demektir */
+
+/* Renk paleti için web sitesi coolors.co */
+
+
+
+body{
+
+    font-size: 22px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    background-color:bisque;
+    color:navy;
+
+}
+
+p{
+
+color: rgba(0,0,0,0.7);  
+
+
+
+}

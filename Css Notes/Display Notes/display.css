@@ -1,0 +1,95 @@
+/* Display seçili öğenin nasıl görüneceğini ayarlar
+
+display:inline-block; satır içinde ama blok gibi büyük bir yer kaplar.
+display:inline satır içinde normal şekilde görünür.
+display:block satır içinde ama ayrı bi blok gibi gözükür.
+display:none gözükmez 
+
+
+
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    font-size: 2rem;
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+main{
+    width: 50%;
+
+}
+
+p{
+
+    margin: 100px 50px;
+    background-color: antiquewhite;
+
+}
+
+.p{
+
+    display: block; 
+    background-color: #333;
+    color: red;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    margin-left:1.5rem;
+    margin-right: 3rem;
+
+}
+
+.opposite{
+    display: inline-block; 
+    background-color:#333;
+    color: red;
+    margin: 10px; /* Display modu değiştirilmediği sürece cümle içerisindeki kelimelere yukarı ve aşağı margin etki etmez ayrıca height değeri de etki etmez */
+    padding: 4rem;
+
+}
+
+ul{
+
+    list-style-type: none;
+    padding-left: 0.5rem;
+    text-align: right;
+    background-color: antiquewhite;
+    margin: 0;
+
+}
+
+li{
+
+    display: inline-block;
+    margin-inline: 2.0rem; /* inline cümle yada satır/çizgi içerisindeki öğelerin dış kutu yerine birbirinden uzaklaşmasını sağlar. */
+    background-color: #333;
+}
+
+li a{
+
+color: white;
+text-decoration: none;
+
+}
+
+li a:hover, li a:focus {
+
+
+
+text-decoration:underline;
+
+
+}

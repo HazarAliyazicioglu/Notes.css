@@ -1,0 +1,117 @@
+/* Flex ve grid farkı nedir?
+Flexbox tek boyutlu kodlamamızı yani sadece içeriği hizalandırmanızı sağlıyorken, grid layout modelinde ise önceden tanımlanmış esnek bir container'a children elementlerin her iki boyutta da istenildiği gibi hizalanmasını sağlar. */
+
+/* Grid Garden oyunu ile öğrendiklerini pekiştirebilirsin */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{scroll-behavior: smooth;}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-auto-rows: 75px auto 75px;
+    grid-template-areas:                   
+    "hd hd hd hd hd hd hd hd hd"        /* Sayfayı bölgelere bölmemize yardımcı olur bu kodda 9 repeat kullandığımız için her bölgeye 9 etiket girdik */
+    "mn mn mn mn mn mn mn sb sb"            
+    "ft ft ft ft ft ft ft ft ft ";
+    gap:0.5rem;
+    
+}
+
+.el {
+
+    background-color: plum;
+    color: white;
+    display: grid;
+    place-content: center;
+
+
+}
+
+.header {
+
+    grid-area: hd; /* Yukarıda template ettiğimiz bölgelerden birini vermemizi sağlar  */
+
+}
+
+.sidebar{
+
+    grid-area: sb;
+    background-color:burlywood;
+}
+
+.footer {
+
+    grid-area:ft;
+
+}
+
+.container{
+
+    grid-area: mn;
+
+    min-height: 400px;
+    min-width: 400px;
+    display:grid;
+    grid-template-columns:200px 100px 300px ; /* Sütunların genişliğini ayarlamamızı sağlar. Örneğin bu kodda 6 kutu var  1. ve 4. kutu 200px, 2. ve 5. 100px, 3. ve 6. 300px  */
+    grid-template-columns: 2fr 1fr 1fr; /* fr değeri ile sütunların genişlik katsayısını ayarlarız Örneğin 1. ve 4. kutu diğer kutuların 2 katı genişliktedir. */
+    grid-template-columns: 200px 1fr 1fr; /* Yukarıdaki iki farklı değerlerin birlikte kullanılabileceğini gösterir */
+    grid-template-columns: repeat(4,1fr); /* Satır başına kaç tane içerik koyacağımızı ve genişliğini belirtiriz  */
+    grid-template-columns: repeat(2,1fr 2fr); /* Kod üzerinden gidersek içerik ikili ikili şekilde satırlara her seferinde bir genişlik değerini uygularak yerleştirilir Örneğin satırdaki kutulardan 1. 1fr, 2. 2fr, 3. 1fr, 4. 2fr, */
+    grid-auto-rows: minmax(150px, auto) ; /* rowların genişliğine aralık vermemizi sağlayan fonksiyon */
+    grid-auto-columns: minmax(100px, auto); /* columnların genişliğine aralık vermemiz sağlayan fonksiyon*/
+    column-gap: 1em; /* Kutular arasındaki sütun boşluklardır */
+    row-gap: 1em; /* Kutular arasındaki satır boşluklarıdır */
+    gap:1em 1em; /* ilk değer satır boşluğu ikinci değer sütun boşluğu için */
+    
+
+}
+
+.box{
+
+    background-color: black;
+    color:white;
+    font-size:2rem;
+    padding: 0.5rem;
+
+}
+
+.box:first-child{
+
+    background-color:blue;
+    grid-column-start: 1; /* Sütunun kaplıyacağı bölgenin başlangıç çizgisini gireriz */
+    grid-column-end: 4; /* Sütunun kaplıyacağı bölgenin bitiş çizgisini gireriz */
+    grid-row-start: 1; /* Satırın kaplıyacağı bölgenin başlangıç çizgisini gireriz */
+    grid-row-end: 3; /* Satırın kaplıyacağı bölgenin bitiş çizgisini gireriz */
+    grid-column: 1 / 4; /* Sütunun kaplıyacağı bölgenin başlangıç ve bitiş çizgisini gireriz */
+    grid-row: 1 / 3; /* Satırın kaplıyacağı bölgenin başlangıç çizgisini gireriz */
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    place-content: end center ;  /* İlki align-content ikincisi justify content */
+
+}
+
+.box:nth-child(2){
+
+background-color:purple;
+grid-column:1 / 5;
+grid-row: 3 / 4;
+
+
+}

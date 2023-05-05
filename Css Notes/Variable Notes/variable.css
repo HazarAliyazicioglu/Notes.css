@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Variables fonksiyonlara benzer. Css kodu olarak :root selector adı altında yazılır ve yazılan değerler daha sonra diğer selectorların içerisine var(...) şeklinde yazılır root selectorı içerisinde değer değiştirildiği zaman diğer selectorlarda kendiliğinden uygulanır. Değere verilecekm isim değiştiklilik gösterebilir. */
+
+  /* FONT */
+
+  --FF: "Noto Sans JP", sans-serif; /* Font family için variable */
+  --FS: 1.5rem; /* Font size için variable */
+  --FS-XL: 4rem; /* XL Font size için variable */
+
+  /* COLOR */
+
+  --BGCOLOR: rgb(173, 156, 134); /* background-color için variable */
+  --HD-BGCOLOR: bisque; /* Header background-color için variable */
+  --SHADOW-COLOR: black; /* Shadow color için variable */
+
+  /* GENERAL */
+
+  --PADDING: 5rem; /* padding atayabileceğimiz variables */   
+  --HEIGHT: 5rem; /* height atayabileceğimiz variables */
+  --SHADOW: 0px 6px 5px -5px var(--SHADOW-COLOR); /* box-shadow atayabileceğimiz variables */
+
+
+}
+
+body {
+  font-size: var(--FS);
+  font-family: var(--FF);
+  background-color: var(--BGCOLOR);
+}
+
+header {
+  background-color: var(--HD-BGCOLOR);
+  height: var(--HEIGHT);
+  padding: var(--PADDING);
+  box-shadow: var(--SHADOW);
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+body{
+    
+    padding: 10%;
+    font-size:2rem;
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+a#naked{ 
+
+    text-decoration:none;
+    cursor: not-allowed;
+    color: red;
+    background-color:white;
+
+}
+
+a{ 
+
+    text-decoration:none;
+    cursor:pointer;
+    color: goldenrod;
+    
+
+}
+
+a:visited{ 
+
+    color: darkslateblue; /* Daha önce ziyaret edilmiş linkin rengini ayarlar */
+
+}
+
+a:hover{
+
+    color:lightgreen; /* Linkin üstüne mouseyi götürdüğümüzde oluşan renk */
+    background-color: orange;
+
+}
+
+a:focus{
+
+    color:lightgreen; /* Linkleri tab tuşu ile gezerken oluşan renk */
+
+}
+
+a:active{
+
+    color:lightpink; /* Linke tıklarken oluşan renk */
+    opacity: 0.6; /* Opaklık derecesini ayarlar */
+
+}

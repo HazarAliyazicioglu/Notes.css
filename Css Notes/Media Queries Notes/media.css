@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{scroll-behavior: smooth;}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    background-color: #475569;
+    background-image:radial-gradient(whitesmoke, #475569);
+    display: flex;
+    flex-direction: column;
+}
+
+header,nav,main,footer{
+
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+
+}
+
+header,footer{
+
+    position:sticky;
+    background-color: dimgray;
+    color: whitesmoke;
+
+}
+
+header{
+
+    top: 0;
+
+}
+
+nav{
+
+    background-color:white;
+    color: black;
+    padding:0.5rem;
+    border-bottom: 2px solid black;
+
+}
+
+main{
+
+    flex-grow: 1;
+
+}
+
+footer{
+
+    bottom: 0;
+
+}
+
+/* SMALL  */
+@media screen and (min-width:576px) {
+    body{
+        background-color:green;
+        background-image:radial-gradient(whitesmoke,green);
+
+    }
+    nav{
+
+        display: none;
+    }
+    
+}
+
+/* MEDIUM  */
+@media screen and (min-width:768px) {
+    body{
+        background-color:gold;
+        background-image:radial-gradient(whitesmoke,gold);
+
+    }
+    
+}
+
+/* LARGE  */
+@media screen and (min-width:992px) {
+    body{
+        background-color:firebrick;
+        background-image:radial-gradient(whitesmoke,firebrick);
+
+    }
+    
+}
+
+/* XL  */
+@media screen and (min-width:1200px) {
+    body{
+        background-color:firebrick;
+        background-image:radial-gradient(whitesmoke,firebrick);
+
+    }
+    
+}
+
+/* MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height:425px) and (min-aspect-ratio: 7/4){
+    body{
+        background-color:dodgerblue;
+        background-image:radial-gradient(whitesmoke,dodgerblue);
+
+    }
+    
+    h1,h2{
+
+        font-size: 1.5rem;
+
+    }
+
+    nav{display: none;}
+}
+/* @media screen and (x) Web sitemizin farklı genişliğe ve yüksekliğe sahip cihazlar üzerinde değişiklilik yapmamız sağlar
+max-width:300px ile sitemizin genişliği 300px olana kadarki olan kısmı özelleştirmiş oluruz
+
+min width:300px ile sitemizin genişliği 300px'ten fazla olan kısmı özelleştirmiş oluruz
+
+min-aspect-ratio: 7/4  Değerlerimizi istediğimiz çerçeve oranına göre veririz ilk değer genişlik ikinci değer yükseklik değeridir
+
+orientation:portrait Sayfamızın yüksekliği genişliğinden fazla olduğu durumları özelleştirir.
+
+orientation:landscape Sayfamızın genişliği yüksekliğinden fazla olduğu durumları özelleştirir.
+
+
+
+*/

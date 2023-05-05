@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{scroll-behavior: smooth;}
+
+body{
+
+    font-size: 1.5rem;;
+    font-family: 'Noto Sans JP', sans-serif;
+    min-height: 200vh;
+}
+
+.outer-container{
+
+    border: 3px dashed black;
+    width:75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+
+}
+
+.inner-container{
+
+    border:2px solid blue;
+    width:40vw;
+    height: 50vh;
+    margin:200px auto;
+
+
+
+}
+
+.box{
+
+    width:150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+
+}
+
+.absolute{
+
+    background-color:blue;
+    position: absolute; /* Absolute değeri relative değere göre pozisyon alır relative değeri olmazsa sayfanın kendisine göre pozisyon alır  */
+    top: 0;
+    left: 30;
+    z-index: 1; /* Öğenin arka planda mı ön planda mı olduğunu ayarlar */
+}
+
+.relative{
+
+    background-color:#f00;
+    position: relative; /* Relative değeri verilen öğe kendi bulunduğu kutunun yani ebeyninin durumuna göre pozisyon alır */
+    top:100px;
+    left: 100px;
+
+}
+
+.fixed{
+
+    background-color: green;
+    position: fixed; /* Sayfanın kendisine göre pozisyon alır ekran aşağı yukarı hareket ettirilse bile ekranla birlikte sabit yerinde hareket eder */
+    top: 100px;
+
+}
+
+.sticky{
+
+    background-color:black;
+    position: sticky;
+    top: 0;
+
+}
+
+section{
+
+    height:100vh;
+
+}
+
+.blue{ background-color:blue;}
+.red{ background-color:red;}
+.green{ background-color:green;}
+
+header, footer{
+
+    text-align: center;
+    color: white;
+    height: 100px;
+    
+
+}
+
+header{
+
+    position: sticky;
+    top: 0;
+    font-size:5rem;
+}
+
+footer{
+
+    background-color:black;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+
+}
+
+a,a:visited a:hover, a:active{
+
+    color: bisque;
+    text-decoration: none;
+}
+
+.social{
+
+    background-color:royalblue;
+    color:white;
+    font-size:inherit;
+    padding: 1rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+
+}

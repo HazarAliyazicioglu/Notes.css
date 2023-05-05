@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+/* Begin Reset */
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img{display:block;}
+
+html{scroll-behavior: smooth;}
+
+/* End Reset */
+
+/* Utility Classes */
+
+.nowrap{
+
+    white-space: nowrap;
+
+}
+
+.offscreen{
+
+    position: absolute;
+    left: -9999px;
+
+}
+
+/* End Utility Classes */
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    min-height: 100vh;
+    width: 1200px;
+
+    background-image:radial-gradient(green, red); /* Arka plan renginin her zaman merkezden diğer yönlere olucak şekilde değişmesini sağlar  */
+
+    background-image: linear-gradient(to bottom right, purple, violet);
+    /* Arka plan renginin bir renkten diğerine dönüşmesini sağlarız başına yö konulması durumunda rengin değişme yönünü belirtiriz
+    
+     Eğer linear etiketinin önüne url eklersek ayrıca ekrana resim eklemiş oluruz   */
+     
+}
+
+.container{
+
+    background-image: url(gallowmere.png);  
+    background-color: rgb(250,210,156); 
+    background-position: bottom;    
+    background-repeat: no-repeat;   
+    background-size:cover;
+
+}
+
+.hero{
+
+    border-bottom: 2px solid black;
+    padding:20px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: rgb(251,210,156 0.10); 
+    background-image: url(gallowmere.png);  /* Css kodunda resim eklememizi sağlar eğer önüne background-coor eklenirse ve saydam yapılırsa karanlık yada aydınlık gibi durumlar gerçekleştirilebilir */
+
+    background-position: bottom;    /* Arka plan resminin pozisyonunu ayarlarız */
+    
+    background-repeat: no-repeat;   /* Arka plan resminin kutu boyunca tekrar edip etmeyeceğini belirleriz */
+    
+    background-size:cover; /* Arka plan resminin büyüklüğünü ayarlarız. 
+    cover ve 100% arka planı tamamen kapsar 
+    contain resmin kendi boyutları ile arka plana sığmasıdır*/
+
+    /* background: repeat-y right center url(...),no-repeat linear-gradient(to bottom right, purple, violet) yazarak background size hariç bütün etiketleri tek seferde halletmiş oluruz */
+
+}
+
+
+.h1{
+
+    font-size: 400%;
+    color: blue;
+    text-shadow: 15px 15px 3px  red ; /* Cümlelere yada kelimelere gölge eklemek için kullanılır İlk değer x-ekseni ikinci değer y-ekseni 3. değer ise blur değeri */
+
+}
+
+.profile-pic-figure{
+
+    width: 35%;
+    text-align: center;
+}
+
+.profile-pic-figure img{
+
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+}
+
+.example{
+
+    margin-top:1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+
+}
+
+.exapmle img {
+
+    width: 25%;
+    height: auto;
+
+}
+
+.clip{
+
+width: 1000px;
+height: 1000px;
+background-color:black;
+color: white;
+font-size: 10rem;
+background-image: url(lad.jpg);
+background-clip: text;     /* Resmi yanının arka planına yerleştirir */
+-webkit-background-clip: text; /* İnternet tarayıcılarında çalışması için kullanılır webkit */
+color:transparent;
+
+
+}

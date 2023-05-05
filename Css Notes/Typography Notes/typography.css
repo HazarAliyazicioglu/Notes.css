@@ -1,0 +1,53 @@
+/* https://fonts.google.com  font bulmak için bir site */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+
+body{
+
+    padding: 10%;
+    font-size: 2rem;
+
+}
+
+input, button{
+
+    font: inherit;
+
+}
+
+#p1{
+
+    text-decoration: line-through;
+    text-transform: lowercase; /* Bütün harfleri küçültür */
+    text-align: right; /* Metni sağa sabitler */ 
+    font-weight: 600; /* Kelimelerin fontunu kalınlaştırır */
+}
+
+#p2{
+
+    text-decoration: underline;
+    text-transform: uppercase; /* Bütün harfleri büyütür */
+    text-align: justify; /* Satır sonları aynı düzende biter */
+    text-indent: 2em; /* Satır başı ekler */
+    letter-spacing: 0.1em; /* Kelimelerin harfleri arasına boşluk ekler */
+}
+
+#p3{
+
+    text-decoration:none;
+    text-transform: capitalize; /* Kelimelerin baş harflerini büyültür */
+    text-align:left; /* Metni sola sabitler */
+    line-height: 1.3; /* Satırlar arasına boşluk ekler */
+    word-spacing: 1.3em; /* Kelimeler arasına boşluk ekler */
+
+}
+
+#p4{
+
+    font-style: italic;
+    /* font-style:oblique daha kalın italic stilidir */
+    font-family: 'Noto Sans JP', sans-serif;
+    text-shadow: 15px 15px 3px  red ; /* Cümlelere yada kelimelere gölge eklemek için kullanılır İlk değer x-ekseni ikinci değer y-ekseni 3. değer ise blur değeri */
+}

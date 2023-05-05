@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans+JP:wght@300&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+
+    font-size: 1.5rem;
+    font-family: 'Abel', sans-serif;
+
+}
+
+body{
+
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+main{
+
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+
+}
+
+div{
+    margin: 0.5em;
+    width: 200px;
+    height: 200px;
+    border:1px solid black;
+    display:grid;
+    place-content: center;
+
+}
+
+div:first-child{
+
+background-color: dodgerblue;
+transform: translateX(-50%); 
+transform: rotateX(180deg); 
+transform: scaleX(120%);
+transform: skewX(-10deg);
+}
+
+div:nth-child(2){
+
+background-color:yellow;
+transform: translateY(-2rem);
+transform: rotateY(180deg);
+transform: scaleY(120%);
+transform: skewY(-10deg); 
+}
+
+div:last-child{
+
+background-color:limegreen;
+transform: translate(100%,-5rem); 
+transform: rotate3d(180deg);
+transform: scale(120%);
+transform: skew(-10deg);
+}
+
+div:hover{
+
+    background-color: midnightblue;
+    transition-property:background-color,transform ; /* Dönüşüm yapacak özellik yazılır, transform yazılırsa kutuyla ilgili bir işlemdir */
+    transition-duration: 1s,1s ; /* Dönüşümün ne kadar sürede gerçekleşeceği yazılır */
+    transition-delay: 0.2s; /* Dönüşümün başındaki gecikmeyi belirleriz */
+    transition-timing-function: ease; /* Dönüşümün hız eğrisini belirtir */
+    transition: all 1s ease 0.5s; /* transition fonksiyonlarının tek kodda yazılmış hali */
+}
+
+div:last-child:hover{
+
+    transform: rotate(180deg);
+
+}
+
+.animate{
+
+    animation-name:slide; /* Yapacağımız animasyona isim veririz */
+    animation-duration:5s; /* Animasyonun süresi */
+    animation-timing-function: ease-in-out; /* Animasyonun hız eğrisi */
+    animation-delay: 1s; /* Animasyonun gecikme süresi */
+    animation-iteration-count: 2; /* Animasyonun kaç kere tekrar edeceği */
+    animation-direction:normal; /* Animasyonun yapılış yönü */
+    animation-fill-mode: forwards;  /* Animasyonun ilk baştaki haline mi yoksa sondaki haline mi döneceği  */
+    animation:5s ease-in-out 1s 2 normal forwards slide; /* Tüm animation kodlarını tek seferde yazmamızı sağlar */
+
+}
+
+/* Animasyonun kademe kademe hangi hareketleri yapacağı yazılır */
+
+@keyframes slide {
+
+    0%{
+        transform: translate(0);
+    }
+
+    33%{
+        transform: translateX(300px) rotate(180deg);
+    }
+    
+    66%{
+        transform: translateX(-300px) rotate(-180deg);
+    }
+    
+    100%{
+        transform: translateX(0px);
+        background-color: blueviolet;
+    }
+    
+    
+
+}
+
+
+/* 
+transform fonksiyonları:
+
+translateX sadece sağa sola hareket eder
+translateY sadece yukarı aşağı hareket eder 
+translate sağa sola ve yukarı aşağı olmak üzere hareket etmesini sağlar.
+rotateX yukarı ve aşağı yönden olacak şekilde döndürür 
+rotateY sağ ve sol yönden olacak şekilde döndürür
+rotate kutuyu döndürür
+scaleX kutuyu X yönünde büyütür
+scaleY kutuyu Y yönünde büyütür
+scale kutuyu büyütür
+skewX X yönünde eğrilik ekler 
+skewY Y yönünde eğrilik ekler
+skew kutuya eğrilik ekler
+matrix(n,n,n,n,n,n) = matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+
+
+Ayrıca her bir değerin 3d versiyonu bulunur bunlarda Z-index devreye girer.matrix 16 değerli olur. 
+
+*/
+
+/*
+transition-timing-function değerleri:
+
+ease yavaş başlar hızlı devam eder yavaş biter
+linear baştan sona aynı hız eğrisiyle devam eder
+ease-in yavaş başlar
+ease-out yavaş biter 
+ease-in-out yavaş başlar yavaş biter
+step-start 
+step-end
+steps(int,start|end)
+cubic-bezier(n,n,n,n) n yerine kendi istediğin sayısal değerleri girerek yapılabilir 0<n<1
+
+*/
